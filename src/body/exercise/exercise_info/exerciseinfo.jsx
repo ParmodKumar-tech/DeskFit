@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './exerciseinfo.css';
 import sampleData from '../../../../public/data'; 
 import { useParams } from 'react-router-dom';
+import ReactPlayer from 'react-player';
+
 
 function Exerciseinfo(){
     const {idx}=useParams();
@@ -9,6 +11,17 @@ function Exerciseinfo(){
     const arrImg=["/gif/cat-cow-stretch.gif","/gif/hipflexor-stretching.gif","/gif/child-pose.gif",
         "/gif/door-chest-opener.gif","/gif/wrist-stretch.jpg","/gif/exersice_13.gif","/gif/standing-side-bend.gif","/gif/bicycle-crunch.gif","gif/knee-to-chest.gif"
     ]
+    const videUrl=["https://www.youtube.com/watch?v=fcnv4gyMzf8",
+        "https://www.youtube.com/watch?v=UrHcQJCqo4Q&t=10s",
+        "https://www.youtube.com/watch?v=EniGBCHAEVQ",
+        "https://www.youtube.com/watch?v=B9uY01NoqBg",
+        "https://www.youtube.com/watch?v=bOXI-wxepmI",
+        "https://www.youtube.com/watch?v=Q_Bpj91Yiis",
+        "https://www.youtube.com/watch?v=7C3uhpdqeTc",
+        "https://www.youtube.com/watch?v=PAEo-zRSanM"
+
+
+    ];
 
     const [howtodobtnclick, setHowtodobtnclick]=useState(false);
 
@@ -22,6 +35,7 @@ function Exerciseinfo(){
     let handleHowtodobtn=()=>{
         if(!howtodobtnclick){
             setHowtodobtnclick(true);
+
             setAnimationbtnclick(false)
         }
         
@@ -39,11 +53,12 @@ function Exerciseinfo(){
     
     }
 
-
     return(
-        <div className='exercise-info font-medium flex flex-col mx-auto w-[80%] my-1 lg:w-[40%] md:w-[50%]'>
+        <div className='exercise-info font-medium flex flex-col mx-auto w-[80%] my-1 mt-[5rem] lg:w-[40%] md:w-[50%]'>
             <h2 className='text-black text-xl font-medium my-1'>{sampleData[idx].name}</h2>
-            <img className='bg-red-400 h-[20rem] w-screen mx-auto' src={arrImg[idx]} alt='exercise-img'/>
+            {animationbtnclick && <img className='bg-red-400 h-[20rem] w-screen mx-auto' src={arrImg[idx]} alt='exercise-img'/>}
+            {howtodobtnclick &&<ReactPlayer url={videUrl[idx]} controls={true} width="100%" height="20rem" />}
+
 
             <div className='flex justify-between my-2'>
                 <button onClick={handleAnimation} className={animationbtnclick ? 'btn-change' :'font-bold rounded-xl px-4 py-1 text-black border  border-gray-800 '}>Animation</button>
