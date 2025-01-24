@@ -57,7 +57,7 @@ function Exerciseinfo(){
         <div className='exercise-info font-medium flex flex-col mx-auto w-[80%] my-1 mt-[5rem] lg:w-[40%] md:w-[50%]'>
             <h2 className='text-black text-xl font-medium my-1'>{sampleData[idx].name}</h2>
             {animationbtnclick && <img className='bg-red-400 h-[20rem] w-screen mx-auto' src={arrImg[idx]} alt='exercise-img'/>}
-            {howtodobtnclick &&<ReactPlayer url={videUrl[idx]} controls={true} width="100%" height="20rem" />}
+            {howtodobtnclick &&<ReactPlayer className='border  border-gray-800' url={videUrl[idx]} controls={true} width="100%" height="20rem" />}
 
 
             <div className='flex justify-between my-2'>
