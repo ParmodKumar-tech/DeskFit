@@ -20,7 +20,6 @@ function Navbar(){
             <ul className='nav-items'>
                 
                 <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/about" >About us</NavLink></li>
                 <li><NavLink to="/contactus">Contact</NavLink></li>
                 <p className='separator my-auto font-bold'>|</p>
                 <p className='username align-middle my-auto mx-2'>{currUsername?currUsername:"Not login"}</p>
@@ -35,10 +34,7 @@ function Navbar(){
             <div></div>
         </div>
 
-        {/* <div className="close-menu-icon">
-            <div className='first-cross'>\</div>
-            <div className='second-cross'>/</div>
-        </div> */}
+       
 
        </header>
     )
