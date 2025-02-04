@@ -8,7 +8,6 @@ import ExerciseCard from './body/exercise/exercise_card/exercisecard'
 import Exerciseinfo from './body/exercise/exercise_info/exerciseinfo'
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Hero from './body/exercise/hero/hero';
-import About from './body/about/about'
 import ContactUs from './body/contactus/contact'
 import Signup from './body/connect/signup/signup'
 import Login from './body/connect/login/login'
