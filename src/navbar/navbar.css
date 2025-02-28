@@ -13,22 +13,12 @@
 
 
 .header{
-    background-color: black;
+    
     color: white;
-    padding: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     top:0;
     left: 0;
     right: 0;
-}
-.header h2{
-    margin: 0.4rem;
-    font-weight: 300;
-    font-size: 1.2rem;
 }
 
 
@@ -38,6 +28,15 @@
     height: 0.13rem;
     margin: 0.3rem;
 }
+
+.header .close-menu-icon div{
+    width: 1.4rem;
+    background-color: #0077ff;
+    height: 0.3rem;
+    margin: 0.3rem;   
+}
+
+
 
 .header .menu-icon{
     display: none;
@@ -59,10 +58,12 @@
     display: none;
 }
 
+
 @media((min-width:100px) and (max-width:639px)){
+
     .header{
-        background-color: #0077ff;
-        position: fixed;
+       
+        position: sticky;
         top: 0;
         right: 0;
         left: 0;
@@ -77,24 +78,14 @@
     .header .menu-icon{
         display: block;
         margin-right: 1rem;
+        padding-right: 1rem;
+       
     }
+
 
     .nav{
         display: none;
     }
-
-    /* .nav .close-menu-icon{
-        position: absolute;
-        right: 5%;
-        top: 5%;
-        font-size: 2rem;
-    }
-
-    .close-menu-icon .second-cross{
-        position: absolute;
-        top: 2%;
-
-    } */
 
     .nav-visible .separator{
         
